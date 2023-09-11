@@ -1,6 +1,6 @@
 import React from "react";
 
-function VoteButton({type, num})
+function VoteButton({type, num, handleClick})
 {
     if (type === undefined || type === null) throw new Error("type must be UP or DOWN!");
     else
@@ -11,7 +11,7 @@ function VoteButton({type, num})
     const typeisup = (type === "Up" || type === "UP");
 
     return (
-        <button onClick={null}>{typeisup ? "👍": "👎"} {num}</button>
+        <button onClick={handleClick}>{typeisup ? "👍": "👎"} {num}</button>
     );
 }
 
